@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+.heading{
+    text-align: center;
+    font-size: 48px;
+}
+.logo{
+    font-size: 2em;
+    color: #359381;
+    pointer-events: none;
+    margin-right: 280px;
+    display: flex;
+    
+}
+.logo p{
+    font-family: 'Kaushan Script', cursive;
+    margin-left: 10px;
+    color: #393939;
+}
+.logo img{
+    width: 40px;
+}
+.navigation a{
+    text-decoration: none;
+    color: #359381;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+.navigation a:hover, .navigation a.active{
+    background: #359381;
+    color: white;
+}
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+.Identify{
+    position: relative;
+    background: white;
+    padding: 100px;
+    height: 100vh;
+    
+}
+.Identify img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+.Identify h1{
+    text-align: center;
+    font-size: 50px;
+    color: #164a41;
+}
+.leftupload{
+    z-index: 5;
+    position: absolute;
+}
+.uploadndisplay{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.leftupload{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 90%;
+}
+.up_column > *:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+
+.upload_box {
+    font-size: 16px;
+    background: #003329;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.upload_box:hover {
+    background: #359381;
+}
+.up_column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#image-container {
+    text-align: center;
+    margin-top: 20px;
+    border: 2px dashed #359381;
+    padding: 20px; 
+    width: 240px; 
+    height: 240px; 
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+#selected-image {
+    width: 200px;
+    height: 200px;
+    display: none;
+    position: relative;
+    z-index: 100;
+    object-fit: cover;
+}
+.uploadbtn{
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 50px;
+    width: 180px;
+    border: none;
+
+}
+.plantselect{
+    height: 35px;
+    width: 160px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+#result{
+    position: relative;
+    z-index: 100;
+    left: 10%;
+}
+#result p{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+
+
+
+/* animations */
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

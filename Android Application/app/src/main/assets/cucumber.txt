@@ -1,0 +1,8 @@
+Cucumber Anthracnose
+Cucumber Bacterial Wilt
+Cucumber Belly Rot
+Cucumber Downy Mildew
+Cucumber Gummy Stem Blight
+Healthy Cucumber
+Healthy Cucumber Leaf
+Cucumber Pythium Fruit Rot

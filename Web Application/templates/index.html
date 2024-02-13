@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Point</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">
+            <img src="{{ url_for('static', filename='icons/beach.png') }}" alt="">
+            <p>Farmers Point</p>
+        </h2>
+        <nav class="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#Identify">Identify</a>
+        </nav>
+    </header>
+    <section class="parallax">
+        <img src="{{ url_for('static', filename='icons/hill1.png') }}" id="hill1">
+        <img src="{{ url_for('static', filename='icons/hill2.png') }}" id="hill2">
+        <img src="{{ url_for('static', filename='icons/hill3.png') }}" id="hill3">
+        <img src="{{ url_for('static', filename='icons/hill4.png') }}" id="hill4">
+        <img src="{{ url_for('static', filename='icons/hill5.png') }}" id="hill5">
+        <img src="{{ url_for('static', filename='icons/tree.png') }}" id="tree">
+        <h2 id="text">Plant Disease Identification</h2>
+        <img src="{{ url_for('static', filename='icons/leaf.png') }}" id="leaf">
+        <img src="{{ url_for('static', filename='icons/plant.png') }}" id="plant">
+    </section>
+    <section class="Identify" id="Identify">
+        <img src="{{ url_for('static', filename='icons/hill1.png') }}">
+        <img src="{{ url_for('static', filename='icons/hill2.png') }}">
+        <img src="{{ url_for('static', filename='icons/hill3.png') }}">
+        <img src="{{ url_for('static', filename='icons/hill4.png') }}">
+        <img src="{{ url_for('static', filename='icons/hill5.png') }}">
+        <img src="{{ url_for('static', filename='icons/tree.png') }}">
+        <img src="{{ url_for('static', filename='icons/leaf.png') }}">
+        <img src="{{ url_for('static', filename='icons/plant.png') }}">
+
+        <h1>Plant Disease Identification</h1>
+        <div class="uploadndisplay">
+            <div class="leftupload">
+                <form action="{{ url_for('index') }}" method="POST" enctype="multipart/form-data" style="height: 100%; position: relative;">
+                    <div class="up_column">
+                    <label for="image" class="upload_box">
+                        <span>Upload Image</span>
+                        <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png" onchange="previewImage(this)" style="display: none;">
+                    </label>
+                    <select name="plant_type" class="plantselect">
+                        <option value="">Select plant type</option> <!-- Default option -->
+                        <option value="potato">Potato</option>
+                        <option value="wheat">Wheat</option>
+                        <option value="cotton">Cotton</option>
+                        <option value="grapes">Grapes</option>
+                        <option value="guava">Guava</option>
+                        <option value="cucumber">Cucumber</option>
+                        <option value="rice">Rice</option>
+                        <option value="tomato">Tomato</option>
+                        <option value="sugarcane">Sugarcane</option>
+                    </select>
+                <input type="submit" value="Upload and Analyze" class="uploadbtn">
+            </form>
+            <div id="result">
+                {% if result %}
+                    <h2>Result:</h2>
+                    <p>{{ result }}</p>
+                {% endif %}
+            </div>
+        </div>
+        </div>
+            <div id="image-container">
+                <img id="selected-image" alt="Selected Image">
+            </div>
+    </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

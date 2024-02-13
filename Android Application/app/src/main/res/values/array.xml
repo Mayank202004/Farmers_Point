@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="plant_types">
+        <item>potato</item>
+        <item>cotton</item>
+        <item>cucumber</item>
+        <item>grapes</item>
+        <item>guava</item>
+        <item>tomato</item>
+        <item>wheat</item>
+        <item>rice</item>
+        <item>sugarcane</item>
+        <!-- Add more plant types as needed -->
+    </string-array>
+    <string-array name="plant_types_marathi">
+        <item>बटाटा</item>
+        <item>कापूस</item>
+        <item>काकडी</item>
+        <item>द्राक्षे</item>
+        <item>पेरू</item>
+        <item>टोमॅटो</item>
+        <item>गहू</item>
+        <item>तांदूळ</item>
+        <item>ऊस</item>
+        <!-- Add more plant types as needed -->
+    </string-array>
+</resources>
